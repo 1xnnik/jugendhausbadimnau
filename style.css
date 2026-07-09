@@ -451,33 +451,6 @@ h3 {
   margin: 0;
 }
 
-.name-tag {
-  position: absolute;
-  z-index: 2;
-  padding: 0.25rem 0.55rem;
-  border-radius: 999px;
-  background: rgba(38, 7, 13, 0.72);
-  color: var(--color-accent);
-  font-size: clamp(0.72rem, 1.5vw, 0.98rem);
-  font-weight: 900;
-  line-height: 1;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(8px);
-}
-
-.tag-philipp-top { left: 25%; top: 8%; }
-.tag-jassy { left: 39%; top: 15%; }
-.tag-annika { left: 51%; top: 15%; }
-.tag-leon { left: 64%; top: 7%; }
-.tag-julian { left: 71%; top: 16%; }
-.tag-jannik { left: 18%; top: 38%; }
-.tag-robert { left: 39%; top: 40%; }
-.tag-philipp-front { left: 59%; top: 38%; }
-.tag-eric { left: 82%; top: 44%; }
-.tag-nelly { left: 27%; top: 66%; }
-.tag-kim { left: 46%; top: 74%; }
-.tag-fiona { left: 70%; top: 70%; }
-
 .board-grid h2 {
   font-size: 1.25rem;
 }
@@ -915,8 +888,4 @@ h3 {
     height: 230px;
   }
 
-  .name-tag {
-    font-size: 0.62rem;
-    padding: 0.18rem 0.38rem;
-  }
 }
