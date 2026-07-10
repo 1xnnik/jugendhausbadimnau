@@ -7,7 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollReveal();
   initV2Menu();
   initHouseModel();
+  initModelFallback();
 });
+
+function initModelFallback() {
+  document.querySelectorAll("model-viewer[data-fallback-src]").forEach((model) => {
+    model.addEventListener("error", () => {
+      const fallbackSrc = model.dataset.fallbackSrc;
+      if (fallbackSrc && model.getAttribute("src") !== fallbackSrc) {
+        model.setAttribute("src", fallbackSrc);
+      }
+    });
+  });
+}
 
 function upgradeLegacyHeader() {
   const oldHeader = document.querySelector(".site-header");

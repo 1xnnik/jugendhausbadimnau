@@ -51,6 +51,7 @@
       <div class="model-stage">
         <model-viewer
           src="models/jugendhaus.glb"
+          data-fallback-src="models/default3d.glb"
           alt="Drehbares 3D-Modell des Jugendhauses"
           camera-controls
           auto-rotate
@@ -63,9 +64,7 @@
           interaction-prompt="none"
           disable-pan
           touch-action="pan-y">
-          <p class="model-error">Das 3D-Modell konnte nicht geladen werden.</p>
         </model-viewer>
-        <p class="drag-hint"><span>↔</span> Ziehen zum Drehen</p>
       </div>
 
       <p class="hero-side-note">Seit 1978<br>in Bad Imnau</p>
