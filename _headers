@@ -12,10 +12,10 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 /images/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=0, must-revalidate
 
 /*.css
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=10000
 
 /*.js
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=10000
