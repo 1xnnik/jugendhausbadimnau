@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initModelFallback() {
   document.querySelectorAll("model-viewer[data-fallback-src]").forEach((model) => {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updateMotion = () => model.toggleAttribute("auto-rotate", !reducedMotion.matches);
+    updateMotion();
+    reducedMotion.addEventListener?.("change", updateMotion);
     model.addEventListener("error", () => {
       const fallbackSrc = model.dataset.fallbackSrc;
       if (fallbackSrc && model.getAttribute("src") !== fallbackSrc) {
@@ -63,6 +67,21 @@ function initV2Menu() {
     const open = button.getAttribute("aria-expanded") !== "true";
     button.setAttribute("aria-expanded", String(open));
     menu.classList.toggle("is-open", open);
+    const label = button.querySelector(".sr-only");
+    if (label) label.textContent = open ? "Menü schließen" : "Menü öffnen";
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || button.getAttribute("aria-expanded") !== "true") return;
+    button.setAttribute("aria-expanded", "false");
+    menu.classList.remove("is-open");
+    const label = button.querySelector(".sr-only");
+    if (label) label.textContent = "Menü öffnen";
+    button.focus();
+  });
+  menu.addEventListener("click", (event) => {
+    if (!(event.target instanceof HTMLAnchorElement)) return;
+    button.setAttribute("aria-expanded", "false");
+    menu.classList.remove("is-open");
   });
 }
 
