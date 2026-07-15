@@ -15,7 +15,7 @@
   Cache-Control: public, max-age=0, must-revalidate
 
 /*.css
-  Cache-Control: public, max-age=10000
+  Cache-Control: public, max-age=0
 
 /*.js
-  Cache-Control: public, max-age=10000
+  Cache-Control: public, max-age=0
