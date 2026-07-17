@@ -38,6 +38,7 @@ function upgradeLegacyHeader() {
           <a href="index.html"${active("index.html")}>Home</a>
           <a href="historie.html"${active("historie.html")}>Historie</a>
           <a href="vorstandschaft.html"${active("vorstandschaft.html")}>Vorstandschaft</a>
+          <a href="galerie.html"${active("galerie.html")}>Galerie</a>
         </div>
         <a class="v2-brand" href="index.html" aria-label="Jugendhaus Bad Imnau – Startseite">
           <img src="images/logo-white.png" alt="Jugendhaus Bad Imnau">
@@ -52,7 +53,8 @@ function upgradeLegacyHeader() {
         </button>
         <div class="v2-mobile-menu" id="v2-mobile-menu">
           <a href="index.html">Home</a><a href="historie.html">Historie</a>
-          <a href="vorstandschaft.html">Vorstandschaft</a><a href="karibische-nacht.html">Karibische Nacht</a>
+          <a href="vorstandschaft.html">Vorstandschaft</a><a href="galerie.html">Galerie</a>
+          <a href="karibische-nacht.html">Karibische Nacht</a>
           <a href="veranstaltungen.html">Veranstaltungen</a><a href="kontakt.html">Kontakt</a>
         </div>
       </nav>
