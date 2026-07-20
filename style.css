@@ -1443,6 +1443,13 @@ h1, h2, .board-year, .event-visual-title, .anniversary-number { font-family: var
   color: #fff;
 }
 .board-archive-section .eyebrow { color: #c8c4bd; }
+.board-history-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+}
 .gallery-grid { gap: 1rem; }
 .gallery-item { background: #ddd8cf; }
 .gallery-item img { aspect-ratio: 4 / 3; object-fit: cover; }
